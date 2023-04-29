@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#FFFFFF"
+
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:elevation="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        app:cardBackgroundColor="#56B2DC"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/akaya_telivigala"
+            android:paddingHorizontal="40dp"
+            android:paddingVertical="10dp"
+            android:text="TouristHelp "
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="40dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="570dp"
+        android:layout_marginTop="60dp"
+        android:alpha="0.9"
+        android:src="@drawable/background2" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:progress="0"
+        android:max="100"
+        android:layout_marginHorizontal="10dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:elevation="20dp"
+    app:cardCornerRadius="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgplace"
+             android:paddingLeft="10dp"
+            android:paddingVertical="5dp"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:src="@color/black" />
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/placename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/akaya_telivigala"
+                android:text="Place name"
+                android:textStyle="bold"
+
+
+                />
+
+            <TextView
+                android:id="@+id/placecountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/placename"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/akaya_telivigala"
+                android:text="Place country"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:id="@+id/placeprovence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/placecountry"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/akaya_telivigala"
+                android:text="Place provence"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
