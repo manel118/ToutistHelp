@@ -38,18 +38,19 @@ private TouristDataBase db ;
         }else
         {
 
-//            ArrayList<PlaceModel> places = new ArrayList<PlaceModel>();
-//            places.add(new PlaceModel("benshkaw","medea","Algeria","forest","https://www.wisaplywood.com/contentassets/d4b728c319fa4182941ec06139e6115c/upm-plywood-healthy-trees.jpg",5,"this is the place disctiption"));
-//            places.add(new PlaceModel("Tamezgida","medea","Algeria","forest","https://insideclimatenews.org/wp-content/uploads/2022/11/forests-beech.jpg",5,"this is the place disctiption"));
-//            places.add(new PlaceModel("jourjoura","medea","Algeria","mountains","https://crosscut.com/sites/default/files/images/articles/old_growth_hero.jpg",9,"this is the place disctiption"));
-//            places.add(new PlaceModel("Tibhirin","medea","Algeria","monumant","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRELa3BpZlKXtyUwgUueydSlBPoUyiZLfFmRLFa_Sdf&s",10,"this is the place disctiption"));
-//
-//            //inintialize the database
-//            db =new TouristDataBase(this);
-//            //fill in the database
-//            for(int i=0 ;i<places.size();i++){
-//                db.addOnePlace(places.get(i));
-//            }
+            ArrayList<PlaceModel> places = new ArrayList<PlaceModel>();
+
+            places.add(new PlaceModel("benshkaw","medea","Algeria","forest",R.drawable.benshkaw1,5,"this is the place disctiption"));
+            places.add(new PlaceModel("Tamezgida","medea","Algeria","forest",000,5,"this is the place disctiption"));
+            places.add(new PlaceModel("jourjoura","medea","Algeria","mountains",000,9,"this is the place disctiption"));
+            places.add(new PlaceModel("Tibhirin","medea","Algeria","monumant",000,10,"this is the place disctiption"));
+
+            //inintialize the database
+            db =new TouristDataBase(this);
+            //fill in the database
+            for(int i=0 ;i<places.size();i++){
+                db.addOnePlace(places.get(i));
+            }
 
 
             progressbar = findViewById(R.id.progress);
