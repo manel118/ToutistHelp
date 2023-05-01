@@ -19,9 +19,17 @@ public class PlaceModel implements Serializable {
     int rate;
     ArrayList<Images> Images  ;
     String discription ;
+    String LinkToMaps ;
 
+    public void setLinkToMaps(String linkToMaps) {
+        LinkToMaps = linkToMaps;
+    }
 
-    public PlaceModel(int id, String name, String provence, String country, String category, int imagUrl, int rate ,String discription ) {
+    public String getLinkToMaps() {
+        return LinkToMaps;
+    }
+
+    public PlaceModel(int id, String name, String provence, String country, String category, int imagUrl, int rate , String discription ) {
         this.id = id;
         this.name = name;
         this.provence = provence;
@@ -29,6 +37,7 @@ public class PlaceModel implements Serializable {
         this.imagUrl = imagUrl;
         this.category = category;
         this.rate = rate;
+
 
     }
 
@@ -102,8 +111,9 @@ public class PlaceModel implements Serializable {
         return Images;
     }
 
-    public void setImages(ArrayList<com.example.touristhelp.Images> images) {
-        Images = images;
+    public void addImages(Images images) {
+        this.Images.add(images);
+
     }
 
     public String getDiscription() {

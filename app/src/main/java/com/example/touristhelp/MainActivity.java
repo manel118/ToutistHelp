@@ -28,71 +28,56 @@ private TouristDataBase db ;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        SharedPreferences sharedPreferences = getSharedPreferences("PREFERECE",MODE_PRIVATE);
-        String FirstTime = sharedPreferences.getString( "FirstTimeInstall", "");
-        if(FirstTime.equals("Yes"))
-        {
-            Intent intent = new Intent(  MainActivity.this,HomeFeed.class);
+        SharedPreferences sharedPreferences = getSharedPreferences("PREFERECE", MODE_PRIVATE);
+        String FirstTime = sharedPreferences.getString("FirstTimeInstall", "");
+        if (FirstTime.equals("Yes")) {
+            Intent intent = new Intent(MainActivity.this, HomeFeed.class);
             startActivity(intent);
 
-        }else
-        {
+        }
+        else {
+            //هاذي تتكزيكوتا فقط في المرة الأولى لي يطلع فيا التطبيق في التيليفون
 
-            ArrayList<PlaceModel> places = new ArrayList<PlaceModel>();
+                progressbar = findViewById(R.id.progress);
 
-            places.add(new PlaceModel("benshkaw","medea","Algeria","forest",R.drawable.benshkaw1,5,"this is the place disctiption"));
-            places.add(new PlaceModel("Tamezgida","medea","Algeria","forest",000,5,"this is the place disctiption"));
-            places.add(new PlaceModel("jourjoura","medea","Algeria","mountains",000,9,"this is the place disctiption"));
-            places.add(new PlaceModel("Tibhirin","medea","Algeria","monumant",000,10,"this is the place disctiption"));
+                setTitle("Home");
+                Thread t = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Handler h = new Handler(Looper.getMainLooper());
+                        do {
+                            progressbar.incrementProgressBy(30);
+                            try {
+                                Thread.sleep(2000);
+                            } catch (InterruptedException e) {
+                                throw new RuntimeException(e);
+                            }
+                        }
+                        while (progressbar.getProgress() != progressbar.getMax());
+                        h.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                Intent i = new Intent(MainActivity.this, HomeFeed.class);
+                                startActivity(i);
+                            }
+                        });
+                    }
+                });
+                t.start();
 
-            //inintialize the database
-            db =new TouristDataBase(this);
-            //fill in the database
-            for(int i=0 ;i<places.size();i++){
-                db.addOnePlace(places.get(i));
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("FirstTimeInstall", "Yes");
+                editor.apply();
             }
 
 
-            progressbar = findViewById(R.id.progress);
 
-            setTitle("Home");
-            Thread t = new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    Handler h = new Handler(Looper.getMainLooper());
-                    do {
-                        progressbar.incrementProgressBy(30);
-                        try {
-                            Thread.sleep(2000);
-                        } catch (InterruptedException e) {
-                            throw new RuntimeException(e);
-                        }
-                    }
-                    while(progressbar.getProgress()!=progressbar.getMax());
-                    h.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            Intent i = new Intent(MainActivity.this,HomeFeed.class);
-                            startActivity(i);
-                        }
-                    });
-                }
-            }); t.start();
-
-            SharedPreferences.Editor editor =sharedPreferences.edit();
-            editor.putString( "FirstTimeInstall","Yes");
-            editor.apply();
-        }
-
-
-        }
-
-    protected void onDestroy() {
-        super.onDestroy();
-        // Close the database
-        db.close();
     }
+        protected void onDestroy () {
+            super.onDestroy();
+            // Close the database
+            db.close();
+        }
 
 
-
-}
+    }

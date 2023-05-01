@@ -40,8 +40,15 @@ private ArrayList<Images> images;
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
-        holder.image.setImageResource(images.get(position).getImageName());
+        int imageRes = images.get(position).getImageName();
+        holder.image.setImageResource(imageRes);
+        holder.image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogImage dialog = new DialogImage(holder.image.getContext(),imageRes);
+                dialog.show();
+            }
+        });
 
     }
     public void setImages(ArrayList<Images> img){

@@ -15,53 +15,94 @@
 
         <ImageView
             android:id="@+id/imgplace"
-             android:paddingLeft="10dp"
+             android:paddingLeft="7dp"
             android:paddingVertical="5dp"
-            android:layout_width="150dp"
+            android:layout_width="145dp"
             android:layout_height="match_parent"
-            android:src="@color/black" />
+            android:src="@color/black"
+            android:layout_marginRight="15dp"
+            />
 
         <RelativeLayout
-            android:layout_marginLeft="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/placename"
+                android:textColor="#476AA5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="7dp"
-                android:fontFamily="@font/akaya_telivigala"
+                android:fontFamily="@font/coiny"
                 android:text="Place name"
+                android:textSize="24dp"
                 android:textStyle="bold"
 
 
                 />
+
 
             <TextView
                 android:id="@+id/placecountry"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/placename"
-                android:layout_marginTop="7dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="-1dp"
+                android:layout_toRightOf="@+id/contry"
                 android:fontFamily="@font/akaya_telivigala"
                 android:text="Place country"
-                android:textStyle="bold"
+                android:textColor="#3CAA24"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/contry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/placename"
+                android:text="Country"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="italic"
+
 
                 />
 
             <TextView
-                android:id="@+id/placeprovence"
+
+                android:id="@+id/placeCategory"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/placecountry"
-                android:layout_marginTop="7dp"
+                android:layout_below="@+id/contry"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="-1dp"
+                android:layout_toRightOf="@+id/category"
                 android:fontFamily="@font/akaya_telivigala"
-                android:text="Place provence"
+                android:text="Place Category"
+                android:textColor="#000000"
+                android:textSize="18dp"
                 android:textStyle="bold" />
 
+            <TextView
+             android:id="@+id/category"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Category"
+             android:textSize="18dp"
+             android:textStyle="italic"
+             android:layout_below="@id/contry"
+             />
         </RelativeLayout>
 
+        <ImageView
+            android:id="@+id/goToMaps"
+            android:layout_width="43dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="the google maps link"
+            android:src="@drawable/google_maps" />
 
     </LinearLayout>
 

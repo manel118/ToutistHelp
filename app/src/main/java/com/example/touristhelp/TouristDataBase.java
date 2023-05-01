@@ -89,7 +89,7 @@ public class TouristDataBase extends SQLiteOpenHelper {
         cv.put(Place_img,model.getImagUrl());
 
         long PlaceID = db.insert(Place_Table,null,cv);
-
+//
 //        ArrayList<Images> imgs = model.getImages();
 //        if(imgs!=null)
 //        {
@@ -100,7 +100,6 @@ public class TouristDataBase extends SQLiteOpenHelper {
 //                 db.insert(IMAGES_TABLE,null,imgvalu);
 //            }
 //        }
-
 
 
     }
@@ -151,7 +150,7 @@ public class TouristDataBase extends SQLiteOpenHelper {
         List<PlaceModel> result = new ArrayList<PlaceModel>();
         SQLiteDatabase db = this.getReadableDatabase();
         String query ;
-        query=" SELECT * FROM "+Place_Table+" WHERE "+Place_Name+" LIKE '"+filter+"'";
+        query=" SELECT * FROM "+Place_Table+" WHERE "+Place_Name+" LIKE '"+filter+"'%";
         Cursor cursor = db.rawQuery(query,null);
 
         if( cursor.moveToFirst()){

@@ -24,8 +24,11 @@ public  TouristDataBase db ;
    private ArrayList<PlaceModel> searchList ;
    private ArrayList<Images> images;
    private ArrayList PLace1images;
+   private final int numberOfPlaces=15 ;
 
 
+
+//هذا الملف تع الصفحة الثانية لي فيها جميع الأماكن
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,43 +39,40 @@ public  TouristDataBase db ;
         searchview = findViewById(R.id.searchv);
 
 
-        ContentValues values =new ContentValues();
-
+//هنا القائمة لي تحطو فيها المعلومات تع الأماكن ومنهم الصورة الأولى اللي تظهر مع الأول
+// طلعو التصاور تع جميع الأماكن في البروجي وحددو id تع البلاسة في constructeur
+        //like that : R.id.NomDePhoto
         places = new ArrayList<PlaceModel>();
         places.add(new PlaceModel("benshkaw","medea","Algeria","forest",R.drawable.benshkaw1,5,"this is the place disctiption"));
         places.add(new PlaceModel("Tamezgida","medea","Algeria","forest",000,5,"this is the place disctiption"));
         places.add(new PlaceModel("jourjoura","medea","Algeria","mountains",000,9,"this is the place disctiption"));
         places.add(new PlaceModel("Tibhirin","medea","Algeria","monumant",000,10,"this is the place disctiption"));
- //idea put all image in list and for each place give 5 place and make a loop
+ //كل بلاسة عندها 5 صور حطو الصور كلها في القائمة 5 ب5 معناها تع كل بلاسة يجو بالترتيب
         images = new ArrayList<>();
+        //تع المكان 1
         images.add(new Images(R.drawable.benshkaw1));
         images.add(new Images(R.drawable.benshkaw2));
         images.add(new Images(R.drawable.benshkaw3));
         images.add(new Images(R.drawable.benshkaw4));
         images.add(new Images(R.drawable.benshkaw5));
-        places.get(0).setImages(images);
+        //تع المكان الثاني ....
 
-         //  db = new TouristDataBase(this);
-//
-//       for(int i=0 ;i<places.size();i++){
-//           db.addOnePlace(places.get(i));
-//       }
-//
+        //هنا نحطو لكل مكان الصور تاوعو
+        //تأكدو بلي كل مكان عندو بالضبط 5 صور غير الصورة اللي تبان مع الأول
+    fillImages();
 
 
-
-
-             //the recycleveiw managing to view all places
+        //the recycleveiw managing to view all places
         touristicPlaces.setLayoutManager(new LinearLayoutManager(HomeFeed.this));
         adapter = new RecycleviewAdapter(this,places);
        adapter.setPlaces(places);
         touristicPlaces.setAdapter(adapter);
 
-
+// هنا الإعدادات تع البحث
     searchview.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
         @Override
         public boolean onQueryTextSubmit(String query) {
-         //   places= (ArrayList<PlaceModel>) db.viewAll();
+       //this is the method of research
             searchList =new ArrayList<>();
             for(int a =0 ;a<places.size(); a++){
                 if(places.get(a).getName().toUpperCase().contains(query.toUpperCase())){
@@ -90,6 +90,7 @@ public  TouristDataBase db ;
             return false;
         }
     });
+    //هنا الإعدادات تع البحث عند ضغط علامة x
     searchview.setOnCloseListener(new SearchView.OnCloseListener() {
         @Override
         public boolean onClose() {
@@ -101,7 +102,13 @@ public  TouristDataBase db ;
     });
     }
 
-    public void fillin(){
-        PLace1images.add(R.drawable.background2);
+    public void fillImages(){
+        int j=0 ;
+        for(int i=0;i<numberOfPlaces;i++){
+            while(j<(i+1)*5){
+                places.get(i).addImages(images.get(j));
+            }
+            j++;
+        }
     }
 }
