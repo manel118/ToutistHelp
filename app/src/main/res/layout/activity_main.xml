@@ -23,10 +23,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/akaya_telivigala"
+            android:gravity="center"
             android:paddingHorizontal="40dp"
             android:paddingVertical="10dp"
             android:text="TouristHelp "
-            android:gravity="center"
             android:textColor="@color/white"
             android:textSize="40dp" />
 

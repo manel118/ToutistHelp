@@ -44,10 +44,17 @@ public  TouristDataBase db ;
         //like that : R.id.NomDePhoto
         places = new ArrayList<PlaceModel>();
         places.add(new PlaceModel("benshkaw","medea","Algeria","forest",R.drawable.benshkaw1,5,"this is the place disctiption"));
+        places.add(new PlaceModel("Ain Errich","M'sila","Algeria","chutes",R.drawable.ain_errich,5,"this is the place disctipition"));
+        places.add(new PlaceModel("Beni Add","Tlemcen","Algeria","grotte",R.drawable.beni_add,5,"this is the place disctipition"));
+        places.add(new PlaceModel("Bordj Zemoura","Bordj Bou Arreridj","Algeria","Tour",R.drawable.borj_zemoura,5,"this is the place disctipition"));
+        places.add(new PlaceModel("Ziama mansouria","Jijel","Algeria","vallée",R.drawable.mansouriah,5,"this is the place disctipition"));
+        places.add(new PlaceModel("Tassili","Illizi","Algeria","montagnes",R.drawable.tassili,5,"this is the place disctipition"));
         places.add(new PlaceModel("Tamezgida","medea","Algeria","forest",000,5,"this is the place disctiption"));
         places.add(new PlaceModel("jourjoura","medea","Algeria","mountains",000,9,"this is the place disctiption"));
         places.add(new PlaceModel("Tibhirin","medea","Algeria","monumant",000,10,"this is the place disctiption"));
- //كل بلاسة عندها 5 صور حطو الصور كلها في القائمة 5 ب5 معناها تع كل بلاسة يجو بالترتيب
+
+        //كل بلاسة عندها 5 صور حطو الصور كلها في القائمة 5 ب5 معناها تع كل بلاسة يجو بالترتيب
+
         images = new ArrayList<>();
         //تع المكان 1
         images.add(new Images(R.drawable.benshkaw1));
@@ -56,6 +63,35 @@ public  TouristDataBase db ;
         images.add(new Images(R.drawable.benshkaw4));
         images.add(new Images(R.drawable.benshkaw5));
         //تع المكان الثاني ....
+        images.add(new Images(R.drawable.ain_errich1));
+        images.add(new Images(R.drawable.ain_errich2));
+        images.add(new Images(R.drawable.ain_errich3));
+        images.add(new Images(R.drawable.ain_errich4));
+        images.add(new Images(R.drawable.ain_errich5));
+        //المكان الثالث
+        images.add(new Images(R.drawable.beni_add1));
+        images.add(new Images(R.drawable.beni_add2));
+        images.add(new Images(R.drawable.beni_add3));
+        images.add(new Images(R.drawable.beni_add4));
+        images.add(new Images(R.drawable.beni_add5));
+        //المكان الرابع
+        images.add(new Images(R.drawable.borj_zemoura1));
+        images.add(new Images(R.drawable.borj_zemoura2));
+        images.add(new Images(R.drawable.borj_zemoura3));
+        images.add(new Images(R.drawable.borj_zemoura4));
+        images.add(new Images(R.drawable.borj_zemoura5));
+        //المكان الخامس
+        images.add(new Images(R.drawable.mansouriah1));
+        images.add(new Images(R.drawable.mansouriah2));
+        images.add(new Images(R.drawable.mansouriah3));
+        images.add(new Images(R.drawable.mansouriah4));
+        images.add(new Images(R.drawable.mansouriah5));
+        //المكان السادس
+        images.add(new Images(R.drawable.tassili1));
+        images.add(new Images(R.drawable.tassili2));
+        images.add(new Images(R.drawable.tassili3));
+        images.add(new Images(R.drawable.tassili4));
+        images.add(new Images(R.drawable.tassili5));
 
         //هنا نحطو لكل مكان الصور تاوعو
         //تأكدو بلي كل مكان عندو بالضبط 5 صور غير الصورة اللي تبان مع الأول
