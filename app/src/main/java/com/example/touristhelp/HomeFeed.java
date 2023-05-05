@@ -63,7 +63,7 @@ public  TouristDataBase db ;
         images.add(new Images(R.drawable.benshkaw4));
         images.add(new Images(R.drawable.benshkaw5));
         //تع المكان الثاني ....
-        images.add(new Images(R.drawable.ain_errich1));
+        images.add(new Images(R.drawable.ain_errich));
         images.add(new Images(R.drawable.ain_errich2));
         images.add(new Images(R.drawable.ain_errich3));
         images.add(new Images(R.drawable.ain_errich4));
