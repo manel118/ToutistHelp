@@ -1,7 +1,6 @@
 package com.example.touristhelp;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -33,8 +32,7 @@ TextView discription ;
         recyclerView= findViewById(R.id.rec);
         Intent in = getIntent();
         PlaceModel place = (PlaceModel) in.getSerializableExtra("Place_model");
-
-       ArrayList<Images> imgs =place.getImages();
+        ArrayList<Images> imgs =place.getImages();
 
          //set the values of ui
         name.setText(place.getName());
