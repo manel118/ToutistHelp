@@ -47,6 +47,5 @@ TextView discription ;
         adapter.setImages(imgs);
         recyclerView.setAdapter(adapter);
 
-        Toast.makeText(getApplication(),"the img R "+ imgs.get(0).imageName,Toast.LENGTH_LONG).show();
     }
 }
