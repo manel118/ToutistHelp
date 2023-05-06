@@ -13,7 +13,7 @@
            android:id="@+id/scrollImage"
            android:layout_width="700px"
            android:layout_height="1020px"
-           android:scaleType="center"
+           android:scaleType="fitCenter"
            />
 
 

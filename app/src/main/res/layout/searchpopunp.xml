@@ -4,14 +4,18 @@
     android:id="@+id/parent"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+
     android:layout_margin="5dp"
     android:elevation="20dp"
     app:cardCornerRadius="15dp">
 
     <LinearLayout
+        android:paddingBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+
+        >
 
         <ImageView
             android:id="@+id/imgplace"
@@ -29,13 +33,14 @@
 
             <TextView
                 android:id="@+id/placename"
-                android:textColor="#476AA5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
-                android:fontFamily="@font/coiny"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/artifika"
                 android:text="Place name"
-                android:textSize="24dp"
+                android:textColor="#476AA5"
+                android:textSize="20dp"
                 android:textStyle="bold"
 
 
@@ -50,7 +55,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="-1dp"
                 android:layout_toRightOf="@+id/contry"
-                android:fontFamily="@font/akaya_telivigala"
+                android:fontFamily="casual"
                 android:text="Place country"
                 android:textColor="#3CAA24"
                 android:textSize="18dp"
@@ -80,29 +85,23 @@
                 android:layout_toRightOf="@+id/category"
                 android:fontFamily="@font/akaya_telivigala"
                 android:text="Place Category"
-                android:textColor="#000000"
+                android:textColor="#E64067"
                 android:textSize="18dp"
-                android:textStyle="bold" />
+                android:textStyle="italic" />
 
             <TextView
              android:id="@+id/category"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:text="Category"
+                android:textColor="@color/black"
              android:textSize="18dp"
              android:textStyle="italic"
              android:layout_below="@id/contry"
              />
         </RelativeLayout>
 
-        <ImageView
-            android:id="@+id/goToMaps"
-            android:layout_width="43dp"
-            android:layout_height="45dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="10dp"
-            android:contentDescription="the google maps link"
-            android:src="@drawable/google_maps" />
+
 
     </LinearLayout>
 

@@ -49,6 +49,7 @@ public class PlaceModel implements Serializable {
         this.category = category;
         this.rate = rate;
         this.discription = discription;
+        Images=new ArrayList<>();
     }
 
     public int getId() {

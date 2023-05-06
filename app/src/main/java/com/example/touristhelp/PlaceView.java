@@ -36,9 +36,9 @@ TextView discription ;
 
          //set the values of ui
         name.setText(place.getName());
-        country.setText(place.getCountry());
-        provence.setText(place.getProvence());
-        category.setText(place.getCategory());
+        country.setText("Paye : "+place.getCountry());
+        provence.setText("ville : "+place.getProvence());
+        category.setText("Catégory : "+place.getCategory());
         discription.setText(place.getDiscription());
 
         //set the adapter with the images we get from the database
