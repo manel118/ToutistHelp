@@ -24,7 +24,7 @@ public  TouristDataBase db ;
    private ArrayList<PlaceModel> searchList ;
    private ArrayList<Images> images;
    private ArrayList PLace1images;
-   private final int numberOfPlaces=13 ;
+   private final int numberOfPlaces=14 ;
 
 
 
