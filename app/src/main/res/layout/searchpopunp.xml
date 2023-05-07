@@ -10,50 +10,59 @@
     app:cardCornerRadius="15dp">
 
     <LinearLayout
-        android:paddingBottom="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="407dp"
+        android:layout_height="142dp"
+        android:background="#E4DABB"
         android:orientation="horizontal"
 
-        >
+        android:paddingBottom="10dp">
 
         <ImageView
             android:id="@+id/imgplace"
-             android:paddingLeft="7dp"
-            android:paddingVertical="5dp"
             android:layout_width="145dp"
             android:layout_height="match_parent"
-            android:src="@color/black"
             android:layout_marginRight="15dp"
-            />
+            android:paddingVertical="5dp"
+            android:paddingLeft="7dp"
+            android:src="@color/black" />
 
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="225dp"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="32dp"
+                android:layout_height="38dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="49dp"
+                app:srcCompat="@drawable/black" />
 
             <TextView
                 android:id="@+id/placename"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="35dp"
+                android:layout_height="44dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="15dp"
                 android:layout_marginBottom="5dp"
                 android:fontFamily="@font/artifika"
                 android:text="Place name"
                 android:textColor="#476AA5"
                 android:textSize="20dp"
-                android:textStyle="bold"
 
 
-                />
-
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/placecountry"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/placename"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="-1dp"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="13dp"
                 android:layout_toRightOf="@+id/contry"
                 android:fontFamily="casual"
                 android:text="Place country"
@@ -66,13 +75,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/placename"
+                android:layout_marginTop="7dp"
                 android:text="Country"
                 android:textColor="@color/black"
                 android:textSize="18dp"
-                android:textStyle="italic"
 
 
-                />
+                android:textStyle="italic" />
 
             <TextView
 
@@ -80,27 +89,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/contry"
-                android:layout_marginLeft="6dp"
-                android:layout_marginTop="-1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="12dp"
                 android:layout_toRightOf="@+id/category"
-                android:fontFamily="@font/akaya_telivigala"
+                android:fontFamily="casual"
                 android:text="Place Category"
-                android:textColor="#E64067"
+                android:textColor="#3CAA24"
                 android:textSize="18dp"
                 android:textStyle="italic" />
 
             <TextView
-             android:id="@+id/category"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="Category"
+                android:id="@+id/category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contry"
+                android:layout_marginTop="13dp"
+                android:text="Category"
                 android:textColor="@color/black"
-             android:textSize="18dp"
-             android:textStyle="italic"
-             android:layout_below="@id/contry"
-             />
+                android:textSize="18dp"
+                android:textStyle="italic" />
         </RelativeLayout>
-
 
 
     </LinearLayout>

@@ -4,32 +4,115 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
     tools:context=".HomeFeed">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="173dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="-3dp"
+        android:layout_marginEnd="2dp"
+        app:srcCompat="@drawable/photo2" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/searchcard"
-        android:layout_width="match_parent"
+        android:layout_width="332dp"
         android:layout_height="wrap_content"
-        android:elevation="20dp"
-        app:cardCornerRadius="15dp"
+        android:layout_alignBottom="@+id/imageView2"
         android:layout_marginHorizontal="15dp"
-        android:layout_marginTop="8dp">
+        android:layout_marginBottom="15dp"
+        android:elevation="15dp"
+        app:cardCornerRadius="10dp">
 
-        <SearchView android:id="@+id/searchv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:queryHint="Country name"
+        <SearchView
+            android:id="@+id/searchv"
+            android:layout_width="345dp"
+            android:layout_height="match_parent"
             android:autofillHints="name"
-            />
+            android:background="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:elevation="0dp"
+            android:queryHint="Country name"
+            android:scrollbarDefaultDelayBeforeFade="50" />
     </androidx.cardview.widget.CardView>
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/touristplaces"
-        android:layout_marginTop="12dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/searchcard" />
+        android:layout_width="wrap_content"
+        android:layout_height="500dp"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="0dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="107dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/coiny"
+        android:text="Travel"
+        android:textColor="#0325D3"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="181dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/akaya_telivigala"
+        android:text="The World"
+        android:textColor="#0C0C0C"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="117dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="122dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="30dp"
+        android:layout_toEndOf="@+id/textView"
+        app:srcCompat="@drawable/icons" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="179dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="16dp"
+        android:text="All places "
+        android:textColor="#090909"
+        android:textSize="16sp"
+        android:textStyle="normal|bold" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="55dp"
+        android:layout_height="41dp"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="7dp"
+        app:srcCompat="@drawable/red" />
 
 
 </RelativeLayout>

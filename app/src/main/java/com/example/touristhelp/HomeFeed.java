@@ -134,7 +134,7 @@ public  TouristDataBase db ;
         images.add(new Images(R.drawable.hogar5));
         images.add(new Images(R.drawable.hogar6));
 //10
-        images.add((new Images(R.drawable.princes6)));
+        images.add((new Images(R.drawable.kachawa3)));
         images.add((new Images(R.drawable.princes1)));
         images.add((new Images(R.drawable.princes4)));
         images.add((new Images(R.drawable.princes2)));
